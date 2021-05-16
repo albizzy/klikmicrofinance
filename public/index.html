@@ -16,7 +16,7 @@
 
 <body>
     <!--The navigation bar for the web-->
-    <div id="nav-container">
+    <header id="nav-container">
         <div class="nav-wrapper">
             <div class="left-side">
                 <div class="nav-link-wrapper">
@@ -26,9 +26,9 @@
                         <a href="service.html">Services <i class='bx bxs-chevron-down'></i></a>
                         <div class="services-explore">
                             <a href="#deposit">Deposit</a>
-                            <a href="#">Transfer</a>
-                            <a href="#">Pay Bills</a>
-                            <a href="#">Loan</a>
+                            <a href="#transfer">Transfer</a>
+                            <a href="#bills">Pay Bills</a>
+                            <a href="#loan">Loan</a>
                         </div>
                     </div>
                     <a href="faqs.html">FAQs</a>
@@ -41,11 +41,11 @@
                 <button><a href="signup.html" id="myButton">sign up</a></button>
             </div>
         </div>
-    </div>
+    </header>
 
     <!--The homepage and its contents-->
     <div class="homepage-overlay"></div>
-    <div class="homepage-content">
+    <section class="homepage-content">
         <div class="homepage-content-wrapper">
             <div class="main-content">
                 <h1>New Level Microfinance</h1><br>
@@ -56,10 +56,10 @@
                 <button id="learn-more"><a>Learn more</a></button>
             </div>
         </div>
-    </div>
+    </section>
 
     <!--The Deposit page and its information-->
-    <div class="deposit-container" id="deposit">
+    <section class="deposit-container" id="deposit">
         <div class="deposit-content-wrapper">
             <div class="deposit-main">
                 <div class="deposit-img-container">
@@ -71,15 +71,15 @@
                     <h1>Deposit Your Cash, Anytime Anywhere</h1><br>
                     <p>With the improved and user friendly experience. Klik provides you a secure and fast deposit service with just simple clicks</p>
                     <div class="deposit-button-container">
-                        <button><a href="#">Deposit</a></button>
+                        <button id="myButton"><a href="#">Deposit</a></button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Transfer page and its information -->
-    <div class="transfer-container">
+    <section class="transfer-container" id="transfer">
         <div class="transfer-content-wrapper">
             <div data-aos="zoom-in-right" data-aos-duration="1500">
                 <div class="left-section">
@@ -98,10 +98,10 @@
             </div>
 
         </div>
-    </div>
+    </section>
 
     <!-- The Bills page and its information-->
-    <div class="bills-container">
+    <section class="bills-container" id="bills">
         <div class="bills-content-wrapper">
             <div class="bills-img">
                 <div class="bill-img-container">
@@ -119,10 +119,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- The loans page and its information -->
-    <div class="loans-container">
+    <section class="loans-container" id="loan">
         <div class="loans-content-wrapper">
             <div data-aos="zoom-in-right" data-aos-duration="1500">
                 <div class="loan-description">
@@ -140,10 +140,55 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- FAQ'S page-->
+    <section class="faqs-container" id="faqs">
+        <div class="faqs-content-wrapper">
+            <div id="faqs-slider">
+                <ul>
+                    <li>
+                        <div class="faqs-slider-container">
+                            <p>“Went with my wife, absolutely brilliant restaurant, the food tasted beautiful, so much depth and very well presented. As good if not better than any in the city centre. Will definitely be returning.” <br> Nathaniel Harwood
+                                – Google</p>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="faqs-slider-container">
+                            <p>“Great friendly service, the staff don't make you feel rushed, but are also very attentive, and on hand all the time if needed, best Thai food I have had in years, flavours are out of this world, and extremely good prices for
+                                the quality you get is top notch!!!!!! Love it” <br>David Armstrong - Porter – Google</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="faqs-slider-container">
+                            <p>“Possibly one of the best in Manchester. A menu designed and prepared by a very skilled chef, ably assisted by his wife who provides a friendly welcome. Always consistent and of high quality.” <br>Paul Fletcher – Google</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="faqs-slider-container">
+                            <p>“Food was amazing and service could not have been better...we went for a quick lunch as our office is opposite the restaurant...very quick service...I am highly recommending this restaurant to all my family and friends...”
+                                <br>Nic Gent – Facebook Page</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="faqs-slider-container">
+                            <p>“Went for the first time last night for my Husbands Birthday, friendly staff, very tasty food, would highly recommend, we will be back.” <br>Joanne Simms – Facebook Page</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="faqs-slider-container">
+                            <p>“A lovely, well decorated restaurant, where great food is served by very friendly staff for a bargain price. The food is authentic and delicious. We'll definitely be returning.”<br>Joe H – Trip Advisor</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
     <!--Klik-web-app-footer-->
-    <div class="footer-container" id="footer">
+    <section class="footer-container" id="footer">
         <div class="footer-content-wrapper">
             <div class="main-content">
                 <div class="products-container">
@@ -155,16 +200,14 @@
                         <div class="products-left-section">
                             <ul>
                                 <li><a href="#">Google play</a></li>
-                                <li><a href="#">Google play</a></li>
-                                <li><a href="#">Google play</a></li>
-                                <li><a href="#">Google play</a></li>
+                                <li><a href="#">Apple store</a></li>
+                                <li><a href="#">Samsung pay</a></li>
                             </ul>
                         </div>
                         <div class="products-right-section">
                             <ul>
-                                <li><a href="#">Product</a></li>
-                                <li><a href="#">Product</a></li>
-                                <li><a href="#">Product</a></li>
+                                <li><a href="#">Klik App</a></li>
+                                <li><a href="#">Website</a></li>
                             </ul>
                         </div>
                     </div>
@@ -236,8 +279,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </body>
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init();
