@@ -1,0 +1,15 @@
+{
+    "hosting": {
+        "site": "klik-microfinance-web",
+        "public": "public",
+        "ignore": [
+            "firebase.json",
+            "**/.*",
+            "**/node_modules/**"
+        ],
+        "rewrites": [{
+            "source": "**",
+            "destination": "/index.html"
+        }]
+    }
+}
