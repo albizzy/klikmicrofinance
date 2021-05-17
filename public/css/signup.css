@@ -5,7 +5,7 @@
 }
 
 body {
-    background: #fff;
+    background: #F6F2FF;
     overflow-x: hidden;
     margin: 0;
     padding: 0;
@@ -24,7 +24,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #474444;
+    background: #040403;
     border-radius: 10px;
 }
 
@@ -46,13 +46,13 @@ a {
 #nav-container {
     display: grid;
     grid-template-columns: 1fr;
-    background: #fff;
-    color: black;
+    background: transparent;
     width: 100%;
-    min-height: 10vh;
-    position: fixed;
+    height: 10%;
+    position: absolute;
     transition: .5s;
     z-index: 1000;
+    padding: 0 1rem 1rem 1rem;
 }
 
 .nav-container:hover {
@@ -67,17 +67,53 @@ a {
 
 .nav-link-wrapper {
     background: transparent;
+    width: 100%;
     height: 100%;
-    margin-left: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-link-wrapper a {
+    background: transparent;
+    width: auto;
+    margin: 0.5rem;
     text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 0.5rem 0.5rem;
     font-size: 12px;
     font-family: 'poppins', sans-serif;
     font-weight: 700;
-    color: #474444;
+    color: #040403;
+}
+
+.nav-link-wrapper a i {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.services-explore {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.services-explore a {
+    color: #040403;
+}
+
+.dropdown:hover .services-explore {
+    display: block;
 }
 
 .nav-link-wrapper a:hover {
@@ -85,27 +121,33 @@ a {
     transition: 0.3s;
 }
 
-.right-side {
+.nav-wrapper .left-side {
+    background: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 600px;
+    padding: .2rem;
+}
+
+.nav-wrapper .right-side {
     display: flex;
     justify-content: space-between;
-    margin-right: 4rem;
+    align-items: center;
     background: transparent;
-    padding: .5rem .5rem;
 }
 
 .brand {
-    color: #474444;
+    color: #F6F2FF;
     font-size: 20px;
     font-weight: 900;
     font-family: 'poppins', sans-serif;
-    padding-right: 2rem;
-    padding-top: 0.3rem;
 }
 
-.right-side button {
+.nav-wrapper .right-side button {
     background: #2386AD;
-    width: 80px;
-    height: 30px;
+    width: 90px;
+    height: 40px;
     margin-left: .5rem;
     font-family: 'poppins', sans-serif;
     display: flex;
@@ -117,17 +159,40 @@ a {
     border-radius: 5px;
 }
 
-.right-side button a {
-    width: 100px;
-    color: #fff;
+.nav-wrapper .right-side button a {
+    width: 100%;
+    color: #F6F2FF;
     text-decoration: none;
     font-family: 'poppins', sans-serif;
     font-weight: 600;
-    font-size: 12px;
+    font-size: .7rem;
 }
 
-.right-side button:hover {
+.nav-wrapper .right-side button:hover {
     cursor: pointer;
+}
+
+span {
+    position: absolute;
+    z-index: 10000000;
+    background: #F6F2FF;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: animate .7s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0.2;
+    }
+    100% {
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+    }
 }
 
 
@@ -157,7 +222,7 @@ a {
 }
 
 .signup-desc-container h1 {
-    color: #474444;
+    color: #040403;
     font-size: 40px;
     font-family: 'poppins', sans-serif;
     font-weight: bold;
@@ -166,7 +231,7 @@ a {
 .signup-desc-container p {
     margin-top: 2rem;
     line-height: 2.5;
-    color: #474444;
+    color: #040403;
     font-size: 14px;
     font-family: 'poppins', sans-serif;
     font-weight: 400;
@@ -199,14 +264,14 @@ a {
 .form-input-wrapper {
     border-radius: 10px;
     display: flex;
-    background: #fff;
+    background: #F6F2FF;
     box-shadow: 0px 6px 20px #e9e8e8;
     padding: 4rem 4rem;
     justify-content: space-between;
 }
 
 form h1 {
-    color: #474444;
+    color: #040403;
     text-align: center;
     background: transparent;
     font-size: 20px;
@@ -217,7 +282,7 @@ form h1 {
 form label {
     text-align: center;
     font-family: 'poppins', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
 }
 
@@ -255,7 +320,7 @@ form input[type=submit] {
     outline: none;
     height: 40px;
     background: #2386AD;
-    color: #fff;
+    color: #F6F2FF;
     margin-bottom: .5rem;
 }
 
@@ -276,10 +341,12 @@ form input[type=submit]:hover {
 }
 
 .form-input-wrapper>.left button a {
-    color: #fff;
+    color: #F6F2FF;
     font-family: 'poppins', sans-serif;
     text-decoration: none;
     font-size: 12px;
+    width: 100%;
+    background: transparent;
 }
 
 form select {
@@ -291,4 +358,16 @@ form select {
     color: #8f8b8b;
     font-family: 'poppins', sans-serif;
     font-size: 10px;
+}
+
+.step {
+    display: block;
+}
+
+.step-2 {
+    display: none;
+}
+
+.step-3 {
+    display: none;
 }

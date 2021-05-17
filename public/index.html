@@ -1,301 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="css/main.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <title>Klik microfinance web</title>
-</head>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.6.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.6.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.6.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/8.6.1/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/8.6.1/firebase-functions.js"></script>
+    <script defer src="/__/firebase/8.6.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/8.6.1/firebase-storage.js"></script>
+    <script defer src="/__/firebase/8.6.1/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/8.6.1/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/8.6.1/firebase-performance.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-<body>
-    <!--The navigation bar for the web-->
-    <header id="nav-container">
-        <div class="nav-wrapper">
-            <div class="left-side">
-                <div class="nav-link-wrapper">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <div class="dropdown">
-                        <a href="service.html">Services <i class='bx bxs-chevron-down'></i></a>
-                        <div class="services-explore">
-                            <a href="#deposit">Deposit</a>
-                            <a href="#transfer">Transfer</a>
-                            <a href="#bills">Pay Bills</a>
-                            <a href="#loan">Loan</a>
-                        </div>
-                    </div>
-                    <a href="#faqs">FAQs</a>
-                    <a href="rates.html">Rates</a>
-                </div>
-            </div>
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="message">
+      <h2>Welcome</h2>
+      <h1>Firebase Hosting Setup Complete</h1>
+      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
+      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    </div>
+    <p id="load">Firebase SDK Loading&hellip;</p>
 
-            <div class="right-side">
-                <div class="brand">KLIK</div>
-                <button><a href="signup.html" id="myButton">sign up</a></button>
-            </div>
-        </div>
-    </header>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
-    <!--The homepage and its contents-->
-    <div class="homepage-overlay"></div>
-    <section class="homepage-content">
-        <div class="homepage-content-wrapper">
-            <div class="main-content">
-                <h1>New Level Microfinance</h1><br>
-                <p>Make Deposits, Transfers and Pay Bills In Just One Click</p>
-            </div>
-
-            <div class="sub-main-content">
-                <button id="learn-more"><a>Learn more</a></button>
-            </div>
-        </div>
-    </section>
-
-    <!--The Deposit page and its information-->
-    <section class="deposit-container" id="deposit">
-        <div class="deposit-content-wrapper">
-            <div class="deposit-main">
-                <div class="deposit-img-container">
-                    <img src="css/img/deposit.jpg" alt="depo">
-                </div>
-            </div>
-            <div data-aos="zoom-in-left" data-aos-duration="1500">
-                <div class="deposit-description">
-                    <h1>Deposit Your Cash, Anytime Anywhere</h1><br>
-                    <p>With the improved and user friendly experience. Klik provides you a secure and fast deposit service with just simple clicks</p>
-                    <div class="deposit-button-container">
-                        <button id="myButton"><a href="#">Deposit</a></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Transfer page and its information -->
-    <section class="transfer-container" id="transfer">
-        <div class="transfer-content-wrapper">
-            <div data-aos="zoom-in-right" data-aos-duration="1500">
-                <div class="left-section">
-                    <h1>Money Transfer Made Easy And Efficient</h1><br>
-                    <p>We know how important and effient money tranfer is. klik app provides you with the advanced money transfer technology with almost no cost at all and with a wide range of experience</p>
-                    <div class="transfer-button-container">
-                        <button><a href="#">Transfer</a></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="right-section">
-                <div class="transfer-img-container">
-                    <img src="css/img/transfer.jpg" alt="trans">
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- The Bills page and its information-->
-    <section class="bills-container" id="bills">
-        <div class="bills-content-wrapper">
-            <div class="bills-img">
-                <div class="bill-img-container">
-                    <img src="css/img/bills.jpg" alt="bill">
-                </div>
-            </div>
-
-            <div data-aos="zoom-in-left" data-aos-duration="1500">
-                <div class="bills-description">
-                    <h1>You can Make Any Bill Payments Using Klik</h1><br>
-                    <p>Klik got it all covered for you. You can make any bill payment from anywhere at any time with our secured system that makes sure your money get there safe</p>
-                    <div class="bill-button-container">
-                        <button><a href="#">Pay Bill</a></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- The loans page and its information -->
-    <section class="loans-container" id="loan">
-        <div class="loans-content-wrapper">
-            <div data-aos="zoom-in-right" data-aos-duration="1500">
-                <div class="loan-description">
-                    <h1>Get Small Loans With Low Interests</h1>
-                    <p>We provide smaller loans to all our customers at very low interest rates and giving just enough time to collect for your loan payments.</p>
-                    <div class="loan-button-container">
-                        <button><a href="#">Take Loan</a></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="loan-img">
-                <div class="loan-img-container">
-                    <img src="css/img/loans.jpg" alt="loan">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ'S page-->
-    <section class="faqs-container" id="faqs">
-        <div class="faqs-content-wrapper">
-            <div id="faqs-slider">
-                <ul>
-                    <li>
-                        <div class="faqs-slider-container">
-                            <p>“Went with my wife, absolutely brilliant restaurant, the food tasted beautiful, so much depth and very well presented. As good if not better than any in the city centre. Will definitely be returning.” <br> Nathaniel Harwood
-                                – Google</p>
-                        </div>
-                    </li>
-
-
-                    <li>
-                        <div class="faqs-slider-container">
-                            <p>“Great friendly service, the staff don't make you feel rushed, but are also very attentive, and on hand all the time if needed, best Thai food I have had in years, flavours are out of this world, and extremely good prices for
-                                the quality you get is top notch!!!!!! Love it” <br>David Armstrong - Porter – Google</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="faqs-slider-container">
-                            <p>“Possibly one of the best in Manchester. A menu designed and prepared by a very skilled chef, ably assisted by his wife who provides a friendly welcome. Always consistent and of high quality.” <br>Paul Fletcher – Google</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="faqs-slider-container">
-                            <p>“Food was amazing and service could not have been better...we went for a quick lunch as our office is opposite the restaurant...very quick service...I am highly recommending this restaurant to all my family and friends...”
-                                <br>Nic Gent – Facebook Page</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="faqs-slider-container">
-                            <p>“Went for the first time last night for my Husbands Birthday, friendly staff, very tasty food, would highly recommend, we will be back.” <br>Joanne Simms – Facebook Page</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="faqs-slider-container">
-                            <p>“A lovely, well decorated restaurant, where great food is served by very friendly staff for a bargain price. The food is authentic and delicious. We'll definitely be returning.”<br>Joe H – Trip Advisor</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!--Klik-web-app-footer-->
-    <section class="footer-container" id="footer">
-        <div class="footer-content-wrapper">
-            <div class="main-content">
-                <div class="products-container">
-                    <div class="product-header-wrapper">
-                        <h3>PRODUCTS</h3>
-                    </div>
-
-                    <div class="products-content-wrapper">
-                        <div class="products-left-section">
-                            <ul>
-                                <li><a href="#">Google play</a></li>
-                                <li><a href="#">Apple store</a></li>
-                                <li><a href="#">Samsung pay</a></li>
-                            </ul>
-                        </div>
-                        <div class="products-right-section">
-                            <ul>
-                                <li><a href="#">Klik App</a></li>
-                                <li><a href="#">Website</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="connect-container">
-                    <div class="connect-header-wrapper">
-                        <h3>CONNECT</h3>
-                    </div>
-
-                    <div class="connect-content-wrapper">
-                        <div class="connect-left-section">
-                            <ul>
-                                <li><a href="#">Twitter</a></li>
-                                <li><a href="#">Github</a></li>
-                                <li><a href="#">Facebook</a></li>
-                                <li><a href="#">Instagram</a></li>
-                            </ul>
-                        </div>
-                        <div class="connect-right-section">
-                            <ul>
-                                <li><a href="#">Linked In</a></li>
-                                <li><a href="#">Whatsapp</a></li>
-                                <li><a href="#">Telegram</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="company-container">
-                    <div class="company-header-wrapper">
-                        <h3>COMPANY</h3>
-                    </div>
-
-                    <div class="company-content-wrapper">
-                        <div class="company-left-section">
-                            <ul>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Pricing</a></li>
-                                <li><a href="#">Developers</a></li>
-                                <li><a href="#">SUpport</a></li>
-                            </ul>
-                        </div>
-                        <div class="company-right-section">
-                            <ul>
-                                <li><a href="#">Contact Us</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Terms of Service</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="logo-and-copyright">
-                <div class="logo-container">
-                    <div class="img-wrapper">
-                        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264.19 281.38"><defs><style>.cls-1,.cls-2{fill:none;}.cls-1,.cls-2,.cls-3,.cls-4{stroke:#fff;}.cls-1,.cls-3,.cls-4{stroke-linecap:round;stroke-linejoin:round;stroke-width:10px;}.cls-2{stroke-miterlimit:10;}.cls-3{fill:#5cff6f;}.cls-4{fill:#73fff5;}.cls-5{fill:#fff;}</style></defs><polyline class="cls-1" points="222.82 95.62 222.49 95.62 220.64 95.62 143.43 95.62 131.64 95.62"/><polyline class="cls-1" points="109.49 179.44 109.27 179.19 109.12 179.03 48.33 112.57"/><path class="cls-1" d="M422.46,450.47a89.94,89.94,0,0,1,7.59-36.27h0a91.23,91.23,0,0,1,47.82-47.11h0a91.35,91.35,0,0,1,35.77-7.24c50,0,90.59,40,91.18,89.53v.36h0v.73" transform="translate(-382 -354.85)"/><path class="cls-2" d="M480.92,398.83c.11-.24.22-.48.32-.72h0" transform="translate(-382 -354.85)"/><path class="cls-2" d="M438.38,473.84h0" transform="translate(-382 -354.85)"/><polyline class="cls-1" points="111.35 96.19 87.13 110.72 108.06 128.96"/><polyline class="cls-1" points="64.65 155.1 57.17 182.33 84.9 181.07"/><line class="cls-2" x1="156.67" y1="20.19" x2="156.66" y2="20.19"/><line class="cls-1" x1="131.64" y1="140.21" x2="202.98" y2="140.21"/><line class="cls-1" x1="148.34" y1="118.99" x2="163.39" y2="118.99"/><line class="cls-1" x1="183.18" y1="118.99" x2="222.82" y2="118.99"/><line class="cls-3" x1="155.86" y1="159.64" x2="222.82" y2="159.64"/><line class="cls-4" x1="131.64" y1="179.44" x2="163.39" y2="179.44"/><line class="cls-1" x1="183.18" y1="179.44" x2="222.82" y2="179.44"/><path class="cls-5" d="M405.79,634.22a18.66,18.66,0,0,1-7.51,1.81A16.52,16.52,0,0,1,382,619.1a16,16,0,0,1,13.57-15.92c5.86-.8,11,.65,14.93,4.81,1.5,1.7-1.21,3.75-2.61,2.25-3.4-3.61-7.36-4.16-11.77-3.66-6.16,1-10.51,5.31-10.51,12.57,0,7.61,5.86,13.42,12.77,13.42a13.33,13.33,0,0,0,5.81-1.45,12.73,12.73,0,0,0,4.1-3.35c1.15-1.71,4.21.15,2.91,2A14.34,14.34,0,0,1,405.79,634.22Z" transform="translate(-382 -354.85)"/><path class="cls-5" d="M415.3,619a15.68,15.68,0,0,1,13.27-15.82,21,21,0,0,1,5.31,0A15.94,15.94,0,0,1,447.55,619c0,10.42-7.51,17-16,17C422.51,636,415.3,629.62,415.3,619Zm3.76.15c0,8.21,5.41,13.42,12.47,13.42,6.76,0,12.31-5,12.31-13.42a12.39,12.39,0,0,0-10.41-12.62,15.91,15.91,0,0,0-4.36,0C423,607.49,419.06,612.34,419.06,619.15Z" transform="translate(-382 -354.85)"/><path class="cls-5" d="M455,635.48a2.28,2.28,0,0,1-2.3-2.16V605.73a2.23,2.23,0,0,1,2.3-2.1h10.92c10,0,14.92,8,14.92,15.92s-5,15.93-14.92,15.93Zm1.3-3.26h9.62c7.51,0,11.26-6.36,11.26-12.67s-3.75-12.72-11.26-12.72h-9.62Z" transform="translate(-382 -354.85)"/><path class="cls-5" d="M491.06,632.17h19.78a1.66,1.66,0,1,1,0,3.31H489.76a2.19,2.19,0,0,1-2.3-2.21V605.78a2.17,2.17,0,0,1,2.3-2.15h21.13a1.6,1.6,0,1,1-.05,3.2H491.06V618.1h18.83c2,0,2.11,3.21,0,3.21H491.06Z" transform="translate(-382 -354.85)"/><path class="cls-5" d="M534.38,635.48h-13a1.84,1.84,0,0,1-1.85-1.81V605.43a1.84,1.84,0,0,1,1.85-1.8h11.87c4.65,0,11.86,1.55,11.86,8.66a6.11,6.11,0,0,1-3.85,6c3.65,1.15,6.16,3.71,6.16,7.76C547.4,633.47,540.69,635.48,534.38,635.48Zm-11.22-28.6V617.1h10.22c4.3,0,8.06-1.15,8.06-4.81,0-4.3-5.11-5.41-8.21-5.41Zm0,25.34h11.22c4.41,0,9.26-1.15,9.26-6.21,0-4-3.4-5.66-7.76-5.66H523.16Z" transform="translate(-382 -354.85)"/><path class="cls-5" d="M553,619a15.67,15.67,0,0,1,13.27-15.82,20.89,20.89,0,0,1,5.3,0A15.94,15.94,0,0,1,585.2,619c0,10.42-7.51,17-16,17C560.17,636,553,629.62,553,619Zm3.75.15c0,8.21,5.41,13.42,12.47,13.42,6.76,0,12.32-5,12.32-13.42a12.4,12.4,0,0,0-10.42-12.62,15.84,15.84,0,0,0-4.35,0C560.67,607.49,556.71,612.34,556.71,619.15Z" transform="translate(-382 -354.85)"/><path class="cls-5" d="M613.45,603.58a1.73,1.73,0,1,1,0,3.45H602.28c0,9,.05,18.18.05,27.19a1.85,1.85,0,0,1-1.9,1.86,1.78,1.78,0,0,1-1.81-1.86V607H587.51a1.73,1.73,0,1,1,0-3.45Z" transform="translate(-382 -354.85)"/><path class="cls-5" d="M620.61,627.56c1.3,4.16,6.86,5.06,10.86,5.06,4.26,0,10.87-1.3,10.87-6.36,0-4.35-5.26-4.7-10.77-5.16-6.91-.55-14.32-1.2-14.32-8.66,0-6.61,7.61-9.56,13.72-9.56,5.26,0,11.82,1.25,13.92,7,.75,2-2.65,2.9-3.4,1.2-1.51-3.81-6.86-4.46-10.47-4.46-3.35,0-9.86,1.36-9.86,5.91,0,4.36,5,4.81,10.81,5.26,6.86.6,14.22,1,14.22,8.46s-8.56,10-14.72,10c-5.11,0-12.92-1.76-14.57-7.76C616.3,626.26,620.21,625.51,620.61,627.56Z" transform="translate(-382 -354.85)"/></svg>
-                    </div>
-                </div>
-                <div class="copyright-container">
-                    <div class="copyright-wrapper">
-                        <h3>&copy; 2020 Codebots.</h3>
-                    </div>
-                </div>
-                <div class="social-container">
-                    <div class="social-wrapper">
-                        <a href="#"><i class='bx bxl-facebook-circle'></i></a>
-                        <a href="#"><i class='bx bxl-twitter' ></i></i></a>
-                        <a href="#"><i class='bx bxl-instagram-alt'></i></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</body>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
-<script src="js/navScript.js"></script>
-
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="/__/firebase/8.6.1/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="/__/firebase/8.6.1/firebase-analytics.js"></script>
-
-<!-- Initialize Firebase -->
-<script src="/__/firebase/init.js"></script>
-
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
 </html>

@@ -5,7 +5,7 @@
 }
 
 body {
-    background: #fff;
+    background: #F6F2FF;
     overflow-x: hidden;
     font-family: 'poppins';
 }
@@ -30,7 +30,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #474444;
+    background: #040403;
     transition: 1.2s;
 }
 
@@ -88,7 +88,7 @@ a {
     font-size: 12px;
     font-family: 'poppins', sans-serif;
     font-weight: 700;
-    color: #fff;
+    color: #F6F2FF;
 }
 
 .nav-link-wrapper a i {
@@ -111,7 +111,7 @@ a {
 }
 
 .services-explore a {
-    color: #474444;
+    color: #040403;
 }
 
 .dropdown:hover .services-explore {
@@ -140,7 +140,7 @@ a {
 }
 
 .brand {
-    color: #fff;
+    color: #F6F2FF;
     font-size: 20px;
     font-weight: 900;
     font-family: 'poppins', sans-serif;
@@ -163,7 +163,7 @@ a {
 
 .nav-wrapper .right-side button a {
     width: 100%;
-    color: #fff;
+    color: #F6F2FF;
     text-decoration: none;
     font-family: 'poppins', sans-serif;
     font-weight: 600;
@@ -177,7 +177,7 @@ a {
 span {
     position: absolute;
     z-index: 10000000;
-    background: #fff;
+    background: #F6F2FF;
     transform: translate(-50%, -50%);
     pointer-events: none;
     border-radius: 50%;
@@ -214,7 +214,7 @@ span {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.1);
     z-index: 2;
 }
 
@@ -241,7 +241,7 @@ span {
 }
 
 .main-content h1 {
-    color: #ffffff;
+    color: #F6F2FFF6;
     font-size: 3rem;
     font-weight: 800;
     font-family: 'poppin', sans-serif;
@@ -252,7 +252,7 @@ span {
 }
 
 .main-content p {
-    color: #474444;
+    color: #040403;
     font-size: 1.5rem;
     font-family: 'poppins', sans-serif;
     font-weight: bold;
@@ -271,7 +271,7 @@ span {
 }
 
 #learn-more {
-    color: #fff;
+    color: #F6F2FF;
     width: 150px;
     height: 60px;
     background: #11e73f;
@@ -297,7 +297,7 @@ span {
 #learn-more:hover {
     box-shadow: 0px 2px 4px #857e7ef5;
     background: #11e73f;
-    color: #fff;
+    color: #F6F2FF;
     transition: .3s;
 }
 
@@ -323,16 +323,15 @@ span {
 .deposit-main {
     background: transparent;
     display: flex;
-    justify-content: center;
     align-items: center;
     height: auto;
-    width: 600px;
+    width: 400px;
 }
 
 .deposit-img-container {
     background: transparent;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
@@ -342,21 +341,21 @@ span {
 
 .deposit-img-container img {
     width: auto;
-    height: 370px;
+    height: 270px;
 }
 
 .deposit-description {
     background: transparent;
     height: auto;
     width: 600px;
-    background: #fff;
+    background: #F6F2FF;
     border-radius: 5%;
     box-shadow: 0px 6px 20px #e9e8e8;
     padding: 1.5rem 1.5rem;
 }
 
 .deposit-description h1 {
-    color: #474444;
+    color: #040403;
     font-size: 40px;
     font-family: 'poppins', sans-serif;
     font-weight: bold;
@@ -364,7 +363,7 @@ span {
 }
 
 .deposit-description p {
-    color: #474444;
+    color: #040403;
     font-size: 20px;
     font-family: 'poppins', sans-serif;
     font-weight: 400;
@@ -395,7 +394,7 @@ span {
 }
 
 .deposit-button-container button a {
-    color: #fff;
+    color: #F6F2FF;
     text-decoration: none;
     text-align: center;
     width: 100%;
@@ -427,7 +426,7 @@ span {
     background: transparent;
     width: 600px;
     height: auto;
-    background: #fff;
+    background: #F6F2FF;
     border-radius: 5%;
     box-shadow: 0px 6px 20px #e9e8e8;
     padding: 1.5rem 1.5rem;
@@ -438,14 +437,14 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 600px;
+    width: 400px;
     height: auto;
 }
 
 .transfer-img-container {
     background: transparent;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
@@ -454,11 +453,11 @@ span {
 
 .transfer-img-container img {
     width: auto;
-    height: 450px;
+    height: 330px;
 }
 
 .left-section h1 {
-    color: #474444;
+    color: #040403;
     font-size: 40px;
     font-family: 'poppins', sans-serif;
     font-weight: bold;
@@ -466,7 +465,7 @@ span {
 }
 
 .left-section p {
-    color: #474444;
+    color: #040403;
     font-size: 20px;
     font-family: 'poppins', sans-serif;
     font-weight: 400;
@@ -497,7 +496,7 @@ span {
 }
 
 .transfer-button-container button a {
-    color: #fff;
+    color: #F6F2FF;
     text-decoration: none;
     text-align: center;
     width: 100%;
@@ -526,7 +525,7 @@ span {
 }
 
 .bills-img {
-    width: 600px;
+    width: 400px;
     height: auto;
     background: transparent;
 }
@@ -534,7 +533,7 @@ span {
 .bills-description {
     width: 600px;
     height: auto;
-    background: #fff;
+    background: #F6F2FF;
     border-radius: 5%;
     box-shadow: 0px 6px 20px #e9e8e8;
     padding: 1.5rem 1.5rem;
@@ -543,7 +542,7 @@ span {
 .bill-img-container {
     background: transparent;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
@@ -552,11 +551,11 @@ span {
 
 .bill-img-container img {
     width: auto;
-    height: 500px;
+    height: 350px;
 }
 
 .bills-description h1 {
-    color: #474444;
+    color: #040403;
     font-size: 40px;
     font-family: 'poppins', sans-serif;
     font-weight: bold;
@@ -564,7 +563,7 @@ span {
 }
 
 .bills-description p {
-    color: #474444;
+    color: #040403;
     font-size: 20px;
     font-family: 'poppins', sans-serif;
     font-weight: 400;
@@ -595,7 +594,7 @@ span {
 }
 
 .bill-button-container button a {
-    color: #fff;
+    color: #F6F2FF;
     text-decoration: none;
     text-align: center;
     width: 100%;
@@ -625,7 +624,7 @@ span {
 
 .loan-img {
     background: transparent;
-    width: 600px;
+    width: 400px;
     height: auto;
 }
 
@@ -633,7 +632,7 @@ span {
     background: transparent;
     width: 600px;
     height: auto;
-    background: #fff;
+    background: #F6F2FF;
     border-radius: 5%;
     box-shadow: 0px 6px 20px #e9e8e8;
     padding: 1.5rem 1.5rem;
@@ -641,7 +640,8 @@ span {
 
 .loan-img-container {
     background: transparent;
-    justify-content: flex-start;
+    display: flex;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
@@ -650,11 +650,11 @@ span {
 
 .loan-img-container img {
     width: auto;
-    height: 450px;
+    height: 320px;
 }
 
 .loan-description h1 {
-    color: #474444;
+    color: #040403;
     font-size: 40px;
     font-family: 'poppins', sans-serif;
     font-weight: bold;
@@ -662,7 +662,7 @@ span {
 }
 
 .loan-description p {
-    color: #474444;
+    color: #040403;
     font-size: 20px;
     font-family: 'poppins', sans-serif;
     font-weight: 400;
@@ -693,7 +693,7 @@ span {
 }
 
 .loan-button-container button a {
-    color: #fff;
+    color: #F6F2FF;
     text-decoration: none;
     text-align: center;
     width: 100%;
@@ -715,7 +715,7 @@ span {
 .faqs-content-wrapper {
     width: 100%;
     height: 300px;
-    background: #fff;
+    background: #F6F2FF;
     padding: .5rem .5rem;
 }
 
@@ -752,14 +752,16 @@ ul {
     -webkit-transition: left .2s linear;
     margin-left: -25px;
     font-family: 'poppins';
-    color: #666;
+    line-height: 2;
+    font-weight: 600;
+    color: #040403;
 }
 
 
 /*** Content ***/
 
 .faqs-slider-container {
-    color: #000;
+    color: #040403;
     margin: 0 auto;
     padding: 0;
     width: 550px;
@@ -768,7 +770,7 @@ ul {
 }
 
 .faqs-slider-container h2 {
-    color: #fff;
+    color: #F6F2FF;
 }
 
 .faqs-slider-container p {
@@ -846,7 +848,7 @@ ul {
 /* styles for the footer */
 
 .footer-container {
-    background: #474444;
+    background: #040403;
     width: 100%;
     height: 100%;
 }
@@ -861,7 +863,7 @@ ul {
     width: 100%;
     height: 350px;
     background: transparent;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #F6F2FF;
     padding: .5rem .5rem;
     display: flex;
     justify-content: space-between;
@@ -883,10 +885,11 @@ ul {
 }
 
 .products-container .product-header-wrapper h3 {
-    color: #fff;
+    color: #F6F2FF;
     font-size: 12px;
+    font-weight: 500;
     font-family: 'poppins', sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     padding: 1rem 1rem;
     line-height: 2;
 }
@@ -913,7 +916,7 @@ ul {
 }
 
 .products-content-wrapper .products-left-section ul li a {
-    color: #fff;
+    color: #F6F2FF;
     font-size: 10px;
     text-decoration: none;
     font-family: 'poppins', sans-serif;
@@ -935,7 +938,7 @@ ul {
 }
 
 .products-content-wrapper .products-right-section ul li a {
-    color: #fff;
+    color: #F6F2FF;
     font-size: 10px;
     text-decoration: none;
     font-family: 'poppins', sans-serif;
@@ -959,8 +962,9 @@ ul {
 }
 
 .connect-container .connect-header-wrapper h3 {
-    color: #fff;
+    color: #F6F2FF;
     font-size: 12px;
+    font-weight: 500;
     font-family: 'poppins', sans-serif;
     font-weight: 400;
     padding: 1rem 1rem;
@@ -989,7 +993,7 @@ ul {
 }
 
 .connect-content-wrapper .connect-left-section ul li a {
-    color: #fff;
+    color: #F6F2FF;
     font-size: 10px;
     text-decoration: none;
     font-family: 'poppins', sans-serif;
@@ -1011,7 +1015,7 @@ ul {
 }
 
 .connect-content-wrapper .connect-right-section ul li a {
-    color: #fff;
+    color: #F6F2FF;
     font-size: 10px;
     text-decoration: none;
     font-family: 'poppins', sans-serif;
@@ -1035,8 +1039,9 @@ ul {
 }
 
 .company-container .company-header-wrapper h3 {
-    color: #fff;
+    color: #F6F2FF;
     font-size: 12px;
+    font-weight: 500;
     font-family: 'poppins', sans-serif;
     font-weight: 400;
     padding: 1rem 1rem;
@@ -1065,7 +1070,7 @@ ul {
 }
 
 .company-content-wrapper .company-left-section ul li a {
-    color: #fff;
+    color: #F6F2FF;
     font-size: 10px;
     text-decoration: none;
     font-family: 'poppins', sans-serif;
@@ -1087,7 +1092,7 @@ ul {
 }
 
 .company-content-wrapper .company-right-section ul li a {
-    color: #fff;
+    color: #F6F2FF;
     text-decoration: none;
     font-size: 10px;
     font-family: 'poppins', sans-serif;
@@ -1120,7 +1125,7 @@ ul {
     align-items: center;
 }
 
-.logo-container .img-wrapper svg {
+.logo-container .img-wrapper img {
     width: 100px;
     height: 100px;
 }
@@ -1140,7 +1145,7 @@ ul {
 }
 
 .copyright-container .copyright-wrapper h3 {
-    color: #fff;
+    color: #F6F2FF;
     font-size: 10px;
     font-family: 'poppins', sans-serif;
     font-weight: 400;
@@ -1163,7 +1168,7 @@ ul {
 }
 
 .social-container .social-wrapper a {
-    color: #fff;
+    color: #F6F2FF;
 }
 
 .social-container .social-wrapper a i {

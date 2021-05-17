@@ -17,7 +17,6 @@
                 <div class="nav-link-wrapper">
                     <a href="index.html">Home</a>
                     <a href="about.html">About</a>
-                    <a href="service.html">Services</a>
                     <a href="faqs.html">FAQs</a>
                     <a href="rates.html">Rates</a>
                 </div>
@@ -30,7 +29,7 @@
     </div>
 
     <!-- The signup form-->
-    <div class="signup-container">
+    <div class="signup-container step-1" id="formOne">
         <div class="signup-content-wrapper">
             <div class="signup-desc-container">
                 <h1>Step 1</h1>
@@ -45,13 +44,13 @@
 
                             <div class="form-input-wrapper">
                                 <div class="left">
-                                    <label>Full Name</label>
-                                    <input type="text" name="fname" placeholder="Full Name" required><br>
-                                    <label>Email</label><br>
-                                    <input type="email" name="email" placeholder="example@gmail.com" required><br>
-                                    <label>Birthday</label><br>
-                                    <input type="date" name="birth" placeholder="mm/dd/yyyy" required>
-                                    <button><a href="signup-2.html">Next</a></button>
+                                    <label id="validationMsgName">Full Name</label>
+                                    <input type="text" name="fname" placeholder="Full Name" required id="required_id_name"><br>
+                                    <label id="validationMsgEmail">Email</label><br>
+                                    <input type="email" name="email" placeholder="example@gmail.com" required id="required_id_email"><br>
+                                    <label id="validationMsgBirthday">Birthday</label><br>
+                                    <input type="date" name="birth" placeholder="mm/dd/yyyy" required id="required_id_birthday">
+                                    <button><a href="#formTwo" onclick="switchToFormTwo()">Next</a></button>
                                 </div>
                             </div>
                         </form>
@@ -61,11 +60,85 @@
             </div>
         </div>
     </div>
+
+    <div class="signup-container step-2" id="formTwo">
+        <div class="signup-content-wrapper">
+            <div class="signup-desc-container">
+                <h1>Step 2</h1>
+                <p>In this step you have to<br> 1. Enter your Mobile Number <i style="font-size: 12px; color: #474444; opacity: .6;">eg +255-6**-***-***</i><br> 2. Choose your Gender <i style="font-size: 12px; color: #474444; opacity: .6;">eg male, female or other</i><br>                    3. Choose your country <i style="font-size: 12px; color: #474444; opacity: .6;">Tanzania, Kenya or Uganda</i></p><br>
+            </div>
+
+            <div data-aos="fade-left" data-aos-duration="1500">
+                <div class="signup-form-container">
+                    <div class="signup-form-wrapper">
+                        <form action="action.php" name="myForm" method="post">
+                            <h1>Create Account</h1><br>
+
+                            <div class="form-input-wrapper">
+                                <div class="left">
+                                    <label id="MsgMobile">Mobile Number</label><br>
+                                    <input type="phone" name="phone" placeholder="+255" required id="required_id_two_mobile"><br>
+                                    <label id="MsgGender">Gender</label><br>
+                                    <select name="gender" id="gender" required id="required_id_two_gender">
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other</option>
+                                    </select><br>
+                                    <label id="MsgCountry">Country</label><br>
+                                    <select name="country" id="country" required id="required_id_two_country">
+                                        <option value="tanzania">Tanzania</option>
+                                        <option value="uganda">Uganda</option>
+                                        <option value="kenya">Kenya</option>
+                                    </select><br>
+                                    <button><a href="#formThree" onclick="switchToFormThree()">Next</a></button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="signup-container step-3" id="formThree">
+        <div class="signup-content-wrapper">
+            <div class="signup-desc-container">
+                <h1>Final Step</h1>
+                <p>In this step you have to<br> 1. Enter your Password <i style="font-size: 12px; color: #474444; opacity: .6;">should contain 8 characters or more</i><br> 2. Confirm your Password <br> 3. Click register</p><br>
+            </div>
+
+            <div data-aos="fade-left" data-aos-duration="1500">
+                <div class="signup-form-container">
+                    <div class="signup-form-wrapper">
+                        <form action="action.php" name="myForm" method="post">
+                            <h1>Create Account</h1><br>
+
+                            <div class="form-input-wrapper">
+                                <div class="left">
+                                    <label>Password</label><br>
+                                    <input type="password" name="pass" placeholder="Enter Password" required id="required_id"><br>
+                                    <p id="validationMsg"></p>
+                                    <label>Confirm Password</label><br>
+                                    <input type="password" name="conpass" placeholder="Confirm Password" required id="required_id"><br>
+                                    <p id="validationMsg"></p>
+                                    <input type="submit" value="Register"><br>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init();
 </script>
 <script src="js/navScript.js"></script>
+<script src="js/signup.js"></script>
 
 </html>
