@@ -5,7 +5,7 @@
 }
 
 body {
-    background: #f5f5f5;
+    background: #fff;
     overflow-x: hidden;
     margin: 0;
     padding: 0;
@@ -136,23 +136,24 @@ a {
 .signup-container {
     display: grid;
     grid-template-columns: 1fr;
-    height: 602.5px;
+    height: 100%;
+    padding: 4rem 4rem;
 }
 
 .signup-content-wrapper {
     display: flex;
-    justify-content: space between;
+    justify-content: space-between;
+    width: auto;
+    height: auto;
+    background: transparent;
+    padding: 1rem 1rem;
 }
 
 .signup-desc-container {
     width: 400px;
-    height: 602.5px;
+    height: auto;
     background: transparent;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 2rem 2rem;
-    margin-left: 2rem;
+    padding: 1rem 1rem;
 }
 
 .signup-desc-container h1 {
@@ -160,14 +161,13 @@ a {
     font-size: 40px;
     font-family: 'poppins', sans-serif;
     font-weight: bold;
-    margin-top: 8rem;
 }
 
 .signup-desc-container p {
     margin-top: 2rem;
-    line-height: 2;
-    color: #2386AD;
-    font-size: 20px;
+    line-height: 2.5;
+    color: #474444;
+    font-size: 14px;
     font-family: 'poppins', sans-serif;
     font-weight: 400;
 }
@@ -175,45 +175,38 @@ a {
 .signup-form-container {
     display: grid;
     grid-template-columns: 1fr;
-    width: 940px;
+    width: 600px;
     padding: .5rem .5rem;
-    height: 100vh;
-    margin-left: 4rem;
+    height: auto;
     background: transparent;
-    position: absolute;
 }
 
 .signup-form-wrapper {
-    padding: 2rem 2rem;
-    width: 70%;
-    height: 100vh;
-    margin-top: 1rem;
-    margin-left: 3rem;
+    width: 100%;
+    height: auto;
     background: transparent;
 }
 
 .form-input-wrapper .left {
     background: transparent;
-}
-
-.form-input-wrapper .right {
-    background: transparent;
-    margin-right: -.1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
 }
 
 .form-input-wrapper {
-    margin-top: 0.5rem;
     border-radius: 10px;
     display: flex;
-    background: #f5f5f5;
+    background: #fff;
     box-shadow: 0px 6px 20px #e9e8e8;
-    padding: 2rem 2rem;
+    padding: 4rem 4rem;
     justify-content: space-between;
 }
 
 form h1 {
     color: #474444;
-    margin-top: 2rem;
     text-align: center;
     background: transparent;
     font-size: 20px;
@@ -222,25 +215,22 @@ form h1 {
 }
 
 form label {
-    margin-top: 0.5rem;
-    margin-right: 2rem;
+    text-align: center;
     font-family: 'poppins', sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
 }
 
 form input {
-    margin-top: 0.5rem;
     padding: 0.5rem 0.5rem;
     font-family: 'poppins', sans-serif;
-    font-size: 10px;
-    width: 250px;
-    height: 25px;
-    border: none;
+    font-size: 12px;
+    width: 100%;
+    height: 30px;
+    border: transparent;
     background: transparent;
     border-bottom: 2px solid #2386AD;
-    outline: none;
-    margin-bottom: .5rem;
+    outline: transparent;
 }
 
 form input::placeholder {
@@ -252,14 +242,6 @@ form input[type=date] {
     color: #8f8b8b;
     font-family: 'poppins', sans-serif;
     font-size: 10px;
-}
-
-.form-input-wrapper>.right label {
-    margin-top: 3rem;
-}
-
-.form-input-wrapper>.right select {
-    margin-bottom: 2.95rem;
 }
 
 form input[type=submit] {
@@ -284,19 +266,20 @@ form input[type=submit]:hover {
 }
 
 .form-input-wrapper>.left button {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
+    width: 50%;
     height: 40px;
-    background: transparent;
-    border: 2px solid #11e73f;
+    background: #11e73f;
+    border: transparent;
     border-radius: 5px;
     outline: none;
 }
 
 .form-input-wrapper>.left button a {
-    color: #11e73f;
+    color: #fff;
     font-family: 'poppins', sans-serif;
     text-decoration: none;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 form select {
