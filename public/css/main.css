@@ -10,6 +10,10 @@ body {
     font-family: 'poppins';
 }
 
+.container-fluid {
+    background: transparent;
+}
+
 
 /* Responsive */
 
@@ -49,7 +53,7 @@ a {
     display: grid;
     grid-template-columns: 1fr;
     background: transparent;
-    width: 100%;
+    min-width: 100vw;
     height: 10%;
     position: absolute;
     transition: .5s;
@@ -79,7 +83,6 @@ a {
 .nav-link-wrapper a {
     background: transparent;
     width: auto;
-    margin: 0.5rem;
     text-decoration: none;
     display: flex;
     justify-content: space-between;
@@ -89,6 +92,7 @@ a {
     font-family: 'poppins', sans-serif;
     font-weight: 700;
     color: #F6F2FF;
+    transition: transform .3s;
 }
 
 .nav-link-wrapper a i {
@@ -119,8 +123,8 @@ a {
 }
 
 .nav-link-wrapper a:hover {
-    color: #2386AD;
-    transition: 0.3s;
+    transform: translateY(-2px);
+    text-decoration: none;
 }
 
 .nav-wrapper .left-side {
@@ -202,20 +206,9 @@ span {
 
 .homepage-content {
     display: grid;
-    grid-template-columns: 2fr;
-    height: 100%;
-}
-
-.homepage-overlay {
-    position: absolute;
-    width: 100%;
-    height: 104%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.1);
-    z-index: 2;
+    grid-template-columns: 1fr;
+    height: 100vh;
+    max-width: 100%;
 }
 
 .homepage-content-wrapper {
@@ -223,9 +216,6 @@ span {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-.homepage-content-wrapper {
     width: 100%;
     height: 100%;
     padding: 4rem 4rem;
@@ -236,8 +226,8 @@ span {
 .main-content {
     background: transparent;
     height: auto;
-    width: auto;
-    padding: 1rem;
+    width: 50%;
+    padding: 1rem 1rem;
 }
 
 .main-content h1 {
@@ -260,14 +250,12 @@ span {
 }
 
 .sub-main-content {
-    width: 60%;
-    height: 75vh;
-    margin-top: 4rem;
+    width: 50%;
+    height: 100%;
     background: transparent;
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-left: 4rem;
+    justify-content: center;
 }
 
 #learn-more {
@@ -275,8 +263,6 @@ span {
     width: 150px;
     height: 60px;
     background: #11e73f;
-    margin-left: 10rem;
-    margin-top: 2rem;
     text-align: center;
     border: none;
     border-radius: 5px;
@@ -341,13 +327,13 @@ span {
 
 .deposit-img-container img {
     width: auto;
-    height: 270px;
+    height: 16.875rem;
 }
 
 .deposit-description {
     background: transparent;
     height: auto;
-    width: 600px;
+    width: 100%;
     background: #F6F2FF;
     border-radius: 5%;
     box-shadow: 0px 6px 20px #e9e8e8;
@@ -424,7 +410,7 @@ span {
 
 .left-section {
     background: transparent;
-    width: 600px;
+    width: 100%;
     height: auto;
     background: #F6F2FF;
     border-radius: 5%;
@@ -531,7 +517,7 @@ span {
 }
 
 .bills-description {
-    width: 600px;
+    width: 100%;
     height: auto;
     background: #F6F2FF;
     border-radius: 5%;
@@ -630,7 +616,7 @@ span {
 
 .loan-description {
     background: transparent;
-    width: 600px;
+    width: 100%;
     height: auto;
     background: #F6F2FF;
     border-radius: 5%;
@@ -750,7 +736,6 @@ ul {
     -moz-transition: left .2s linear;
     -o-transition: left .2s linear;
     -webkit-transition: left .2s linear;
-    margin-left: -25px;
     font-family: 'poppins';
     line-height: 2;
     font-weight: 600;
@@ -1173,4 +1158,169 @@ ul {
 
 .social-container .social-wrapper a i {
     font-size: 20px;
+}
+
+
+/* Media queries */
+
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+    /* Nav queries */
+    .nav-container .nav-wrapper {
+        width: 100vh;
+        padding: 0rem 0rem;
+    }
+    /* Homepage queries */
+    .homepage-content .homepage-content-wrapper {
+        width: 100vw;
+        padding: 2rem 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .main-content h1 {
+        color: #F6F2FFF6;
+        font-size: 30px;
+        font-weight: 800;
+        font-family: 'poppin', sans-serif;
+        margin-top: 2rem;
+        padding: 1rem 1rem;
+        position: relative;
+        z-index: 4;
+    }
+    .main-content p {
+        color: #040403;
+        font-size: 16px.5rem;
+        font-family: 'poppins', sans-serif;
+        font-weight: bold;
+        padding: 1rem 1rem;
+    }
+    /* Deposit queries */
+    .deposit-container .deposit-content-wrapper {
+        width: 100vw;
+        padding: 2rem 2rem;
+    }
+    .deposit-main {
+        display: none;
+    }
+    .deposit-content-wrapper .deposit-description {
+        background: transparent;
+        height: auto;
+        width: 100%;
+        background: #F6F2FF;
+        border-radius: 5%;
+        box-shadow: 0px 6px 20px #e9e8e8;
+        padding: 1.5rem 1.5rem;
+    }
+    .deposit-description h1 {
+        color: #040403;
+        font-size: 30px;
+        font-family: 'poppins', sans-serif;
+        font-weight: bold;
+        padding: 1rem 1rem;
+    }
+    .deposit-description p {
+        color: #040403;
+        font-size: 16px;
+        font-family: 'poppins', sans-serif;
+        font-weight: 400;
+        padding: 1rem 1rem;
+        line-height: 2;
+    }
+    /* Transfer queries */
+    .transfer-container .transfer-content-wrapper {
+        width: 100vw;
+        padding: 2rem 2rem;
+    }
+    .transfer-content-wrapper .right-section {
+        display: none;
+    }
+    .transfer-content-wrapper .left-section {
+        background: transparent;
+        width: 100%;
+        height: auto;
+        background: #F6F2FF;
+        border-radius: 5%;
+        box-shadow: 0px 6px 20px #e9e8e8;
+        padding: 1.5rem 1.5rem;
+    }
+    .left-section h1 {
+        color: #040403;
+        font-size: 30px;
+        font-family: 'poppins', sans-serif;
+        font-weight: bold;
+        padding: 1rem 1rem;
+    }
+    .left-section p {
+        color: #040403;
+        font-size: 16px;
+        font-family: 'poppins', sans-serif;
+        font-weight: 400;
+        padding: 1rem 1rem;
+        line-height: 2;
+    }
+    /* Bills queries */
+    .bills-container .bills-content-wrapper {
+        width: 100vw;
+        padding: 2rem 2rem;
+    }
+    .bills-content-wrapper .bills-img {
+        display: none;
+    }
+    .bills-content-wrapper .bills-description {
+        width: 100%;
+        height: auto;
+        background: #F6F2FF;
+        border-radius: 5%;
+        box-shadow: 0px 6px 20px #e9e8e8;
+        padding: 1.5rem 1.5rem;
+    }
+    .bills-description h1 {
+        color: #040403;
+        font-size: 30px;
+        font-family: 'poppins', sans-serif;
+        font-weight: bold;
+        padding: 1rem 1rem;
+    }
+    .bills-description p {
+        color: #040403;
+        font-size: 16px;
+        font-family: 'poppins', sans-serif;
+        font-weight: 400;
+        padding: 1rem 1rem;
+        line-height: 2;
+    }
+    /* Loans queries */
+    .loans-container .loans-content-wrapper {
+        width: 100vw;
+        padding: 2rem 2rem;
+    }
+    .loans-content-wrapper .loan-img {
+        display: none;
+    }
+    .loans-content-wrapper .loan-description {
+        background: transparent;
+        width: 100%;
+        height: auto;
+        background: #F6F2FF;
+        border-radius: 5%;
+        box-shadow: 0px 6px 20px #e9e8e8;
+        padding: 1.5rem 1.5rem;
+    }
+    .loan-description h1 {
+        color: #040403;
+        font-size: 30px;
+        font-family: 'poppins', sans-serif;
+        font-weight: bold;
+        padding: 1rem 1rem;
+    }
+    .loan-description p {
+        color: #040403;
+        font-size: 16px;
+        font-family: 'poppins', sans-serif;
+        font-weight: 400;
+        padding: 1rem 1rem;
+        line-height: 2;
+    }
 }
