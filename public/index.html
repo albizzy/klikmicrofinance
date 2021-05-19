@@ -46,12 +46,38 @@
         </div>
     </header>
 
+    <!---->
+    <div class="full-screen-nav-container">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class='bx bx-menu'></i></span>
+    </div>
+
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <div class="overlay-dropdown">
+                <a href="service.html">Services <i class='bx bxs-chevron-right'></i></a>
+                <div class="overlay-services-explore">
+                    <a href="#deposit">Deposit</a>
+                    <a href="#transfer">Transfer</a>
+                    <a href="#bills">Pay Bills</a>
+                    <a href="#loan">Loan</a>
+                </div>
+            </div>
+            <a href="#">FAQS</a>
+            <a href="#">Rates</a>
+
+            <button><a href="signup.html" id="myButton">sign up</a></button>
+        </div>
+    </div>
+
     <!--The homepage and its contents-->
     <section class="homepage-content">
         <div class="homepage-content-wrapper">
             <div class="main-content">
                 <h1>New Level Microfinance</h1><br>
-                <p>Make Deposits, Transfers and Pay Bills In Just One Click</p>
+                <p>Deposits, Transfers, Payments and Instant loans</p>
             </div>
 
             <div class="sub-main-content">
@@ -70,10 +96,10 @@
             </div>
             <div data-aos="zoom-in-left" data-aos-duration="1500">
                 <div class="deposit-description">
-                    <h1>Deposit Your Cash, Anytime Anywhere</h1><br>
-                    <p>With the improved and user friendly experience. Klik provides you a secure and fast deposit service with just simple clicks</p>
+                    <h1>Cash Deposit</h1><br>
+                    <p><strong>Klik</strong> verified agents<br> <strong>Klik</strong> offices<br> <strong>Klik</strong> partners </p>
                     <div class="deposit-button-container">
-                        <button id="myButton"><a href="#">Deposit</a></button>
+                        <button id="myButton"><a href="#">Locate</a></button>
                     </div>
                 </div>
             </div>
@@ -85,8 +111,8 @@
         <div class="transfer-content-wrapper">
             <div data-aos="zoom-in-right" data-aos-duration="1500">
                 <div class="left-section">
-                    <h1>Money Transfer Made Easy And Efficient</h1><br>
-                    <p>We know how important and effient money tranfer is. klik app provides you with the advanced money transfer technology with almost no cost at all and with a wide range of experience</p>
+                    <h1>Transfer</h1><br>
+                    <p>Send money<br> Receive Money<br> Bank Transfers</p>
                     <div class="transfer-button-container">
                         <button><a href="#">Transfer</a></button>
                     </div>
@@ -113,8 +139,8 @@
 
             <div data-aos="zoom-in-left" data-aos-duration="1500">
                 <div class="bills-description">
-                    <h1>You can Make Any Bill Payments Using Klik</h1><br>
-                    <p>Klik got it all covered for you. You can make any bill payment from anywhere at any time with our secured system that makes sure your money get there safe</p>
+                    <h1>Bill Payment</h1><br>
+                    <p>Subscription<br> Government payments<br> Electric & water bills</p>
                     <div class="bill-button-container">
                         <button><a href="#">Pay Bill</a></button>
                     </div>
@@ -128,8 +154,8 @@
         <div class="loans-content-wrapper">
             <div data-aos="zoom-in-right" data-aos-duration="1500">
                 <div class="loan-description">
-                    <h1>Get Small Loans With Low Interests</h1>
-                    <p>We provide smaller loans to all our customers at very low interest rates and giving just enough time to collect for your loan payments.</p>
+                    <h1>Instant Loan</h1>
+                    <p>Short term loan<br> Long term loan<br> Low interest rate<br></p>
                     <div class="loan-button-container">
                         <button><a href="#">Take Loan</a></button>
                     </div>
@@ -147,7 +173,7 @@
     <!-- FAQ'S page-->
     <section class="faqs-container" id="faqs">
         <div class="faqs-content-wrapper">
-            <div id="faqs-slider">
+            <div class="faqs-slider">
                 <ul>
                     <li>
                         <div class="faqs-slider-container">
@@ -202,7 +228,7 @@
                         <div class="products-content-wrapper">
                             <div class="products-left-section">
                                 <ul>
-                                    <li><a href="#">Google play</a></li>
+                                    <li><a href="#">Play Store</a></li>
                                     <li><a href="#">Apple store</a></li>
                                     <li><a href="#">Samsung pay</a></li>
                                 </ul>
@@ -249,14 +275,14 @@
                                     <li><a href="#">About</a></li>
                                     <li><a href="#">Pricing</a></li>
                                     <li><a href="#">Developers</a></li>
-                                    <li><a href="#">SUpport</a></li>
+                                    <li><a href="#">Support</a></li>
                                 </ul>
                             </div>
                             <div class="company-right-section">
                                 <ul>
                                     <li><a href="#">Contact Us</a></li>
                                     <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Terms of Service</a></li>
+                                    <li><a href="#">Terms</a></li>
                                 </ul>
                             </div>
                         </div>

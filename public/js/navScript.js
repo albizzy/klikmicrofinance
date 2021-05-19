@@ -10,7 +10,7 @@ window.onscroll = function() {
 
     prevScrollPos = currentScrollPos;
 }
-*/
+
 
 //ripples effect
 const buttons = document.querySelectorAll("a");
@@ -39,6 +39,8 @@ $('#myButton').click(function() {
     }, 1000);
 });
 
+*/
+
 //Faqs slider animation
 
 let slideIndex = 0;
@@ -57,4 +59,12 @@ function showSlides() {
 
     slides[slideIndex - 1].style.display = "block";
     setTimeout(showSlides, 2000);
+}
+
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
 }

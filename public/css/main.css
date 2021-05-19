@@ -38,19 +38,12 @@ body {
     transition: 1.2s;
 }
 
-a {
-    position: relative;
-    display: inline-block;
-    text-decoration: none;
-    padding: 0.7rem 0.7rem;
-    overflow: hidden;
-}
-
 
 /*styles for nav bar*/
 
 #nav-container {
     display: grid;
+    display: none;
     grid-template-columns: 1fr;
     background: transparent;
     min-width: 100vw;
@@ -178,27 +171,98 @@ a {
     cursor: pointer;
 }
 
-span {
+.full-screen-nav-container {
+    background: transparent;
+    width: 100%;
     position: absolute;
-    z-index: 10000000;
-    background: #F6F2FF;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    border-radius: 50%;
-    animation: animate .7s linear infinite;
+    padding: 1rem 1rem;
 }
 
-@keyframes animate {
-    0% {
-        width: 0;
-        height: 0;
-        opacity: 0.2;
-    }
-    100% {
-        width: 100px;
-        height: 100px;
-        opacity: 0;
-    }
+.full-screen-nav-container span {
+    color: #F6F2FF;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: absolute;
+    z-index: 15;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.overlay-services-explore {
+    display: none;
+    position: absolute;
+    top: -5px;
+    left: 90px;
+    background-color: transparent;
+    width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.overlay-services-explore a {
+    color: #040403;
+}
+
+.overlay-dropdown:hover .overlay-services-explore {
+    display: block;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 16px;
+}
+
+.overlay-content button {
+    background: #2386AD;
+    width: 80px;
+    border-radius: 5px;
+    border: transparent;
+    outline: transparent;
+}
+
+.overlay-content button a {
+    color: #F6F2FF;
+    font-size: 14px;
+}
+
+.overlay-content button:hover {
+    background: #093880;
 }
 
 
@@ -207,7 +271,7 @@ span {
 .homepage-content {
     display: grid;
     grid-template-columns: 1fr;
-    height: 100vh;
+    height: 100%;
     max-width: 100%;
 }
 
@@ -242,7 +306,7 @@ span {
 }
 
 .main-content p {
-    color: #040403;
+    color: #F6F2FF;
     font-size: 1.5rem;
     font-family: 'poppins', sans-serif;
     font-weight: bold;
@@ -596,7 +660,7 @@ span {
     background: transparent;
     display: grid;
     grid-template-columns: 1fr;
-    min-height: 100vh;
+    height: 100%;
 }
 
 .loans-content-wrapper {
@@ -702,31 +766,28 @@ span {
     width: 100%;
     height: 300px;
     background: #F6F2FF;
+    display: flex;
+    justify-content: center;
     padding: .5rem .5rem;
 }
 
-#faqs-slider,
-ul {
-    height: 200px;
-}
-
-#faqs-slider {
-    margin: auto;
+.faqs-slider {
     overflow: hidden;
-    padding: 20px;
-    margin-top: 50px;
+    padding: 1rem 1rem;
     position: relative;
     width: 600px;
+    height: 200px;
+    background: transparent;
 }
 
-#faqs-slider li {
+.faqs-slider li {
     position: relative;
     width: 600px;
     display: inline-block;
     height: 200px;
 }
 
-#faqs-slider ul {
+.faqs-slider ul {
     list-style: none;
     position: absolute;
     left: 0px;
@@ -747,11 +808,13 @@ ul {
 
 .faqs-slider-container {
     color: #040403;
-    margin: 0 auto;
-    padding: 0;
-    width: 550px;
-    min-height: 180px;
-    text-align: center;
+    padding: 2rem 2rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
 }
 
 .faqs-slider-container h2 {
@@ -759,7 +822,6 @@ ul {
 }
 
 .faqs-slider-container p {
-    margin: 10px 25px;
     font-weight: semi-bold;
     line-height: 150%;
 }
@@ -820,11 +882,11 @@ ul {
     }
 }
 
-#faqs-slider ul {
+.faqs-slider ul {
     animation: slide-animation 20s infinite;
 }
 
-#faqs-slider ul:hover {
+.faqs-slider ul:hover {
     animation-play-state: paused;
     animation-play-state: paused;
 }
@@ -890,10 +952,9 @@ ul {
 
 .products-content-wrapper .products-left-section {
     background: transparent;
-    width: 49.5%;
     height: 70%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .products-content-wrapper .products-left-section ul li {
@@ -912,10 +973,9 @@ ul {
 
 .products-content-wrapper .products-right-section {
     background: transparent;
-    width: 49.5%;
     height: 70%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .products-content-wrapper .products-right-section ul li {
@@ -967,10 +1027,9 @@ ul {
 
 .connect-content-wrapper .connect-left-section {
     background: transparent;
-    width: 49.5%;
     height: 70%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .connect-content-wrapper .connect-left-section ul li {
@@ -989,10 +1048,9 @@ ul {
 
 .connect-content-wrapper .connect-right-section {
     background: transparent;
-    width: 49.5%;
     height: 70%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .connect-content-wrapper .connect-right-section ul li {
@@ -1044,13 +1102,12 @@ ul {
 
 .company-content-wrapper .company-left-section {
     background: transparent;
-    width: 49.5%;
     height: 70%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
-.company-content-wrapper .company-left-section ul li {
+.company-content-wrapper .company-left-section ul {
     list-style: none;
 }
 
@@ -1066,10 +1123,9 @@ ul {
 
 .company-content-wrapper .company-right-section {
     background: transparent;
-    width: 49.5%;
     height: 70%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .company-content-wrapper .company-right-section ul li {
@@ -1172,6 +1228,12 @@ ul {
         width: 100vh;
         padding: 0rem 0rem;
     }
+    .full-screen-nav-container {
+        display: block;
+    }
+    .overlay {
+        display: block;
+    }
     /* Homepage queries */
     .homepage-content .homepage-content-wrapper {
         width: 100vw;
@@ -1180,7 +1242,7 @@ ul {
         flex-direction: column;
     }
     .main-content h1 {
-        color: #F6F2FFF6;
+        color: #F6F2FF;
         font-size: 30px;
         font-weight: 800;
         font-family: 'poppin', sans-serif;
@@ -1190,7 +1252,7 @@ ul {
         z-index: 4;
     }
     .main-content p {
-        color: #040403;
+        color: #F6F2FF;
         font-size: 16px.5rem;
         font-family: 'poppins', sans-serif;
         font-weight: bold;
@@ -1215,6 +1277,8 @@ ul {
     }
     .deposit-description h1 {
         color: #040403;
+        background: transparent;
+        width: 340px;
         font-size: 30px;
         font-family: 'poppins', sans-serif;
         font-weight: bold;
@@ -1246,6 +1310,8 @@ ul {
         padding: 1.5rem 1.5rem;
     }
     .left-section h1 {
+        background: transparent;
+        width: 340px;
         color: #040403;
         font-size: 30px;
         font-family: 'poppins', sans-serif;
@@ -1277,6 +1343,8 @@ ul {
         padding: 1.5rem 1.5rem;
     }
     .bills-description h1 {
+        background: transparent;
+        width: 340px;
         color: #040403;
         font-size: 30px;
         font-family: 'poppins', sans-serif;
@@ -1309,6 +1377,8 @@ ul {
         padding: 1.5rem 1.5rem;
     }
     .loan-description h1 {
+        background: transparent;
+        width: 340px;
         color: #040403;
         font-size: 30px;
         font-family: 'poppins', sans-serif;
@@ -1322,5 +1392,92 @@ ul {
         font-weight: 400;
         padding: 1rem 1rem;
         line-height: 2;
+    }
+    .footer-container .footer-content-wrapper {
+        width: 100vw;
+    }
+    .products-container {
+        padding: 0;
+    }
+    .products-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: transparent;
+    }
+    .products-left-section ul {
+        list-style: none;
+        background: transparent;
+        width: 100%;
+    }
+    .products-left-section ul li a {
+        color: #F6F2FF;
+        font-size: 10px;
+        text-decoration: none;
+        font-family: 'poppins', sans-serif;
+        font-weight: 400;
+        line-height: 2;
+    }
+    .connect-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .connect-content-wrapper .connect-left-section ul li {
+        list-style: none;
+    }
+    .connect-content-wrapper .connect-left-section ul li a {
+        color: #F6F2FF;
+        font-size: 10px;
+        text-decoration: none;
+        font-family: 'poppins', sans-serif;
+        font-weight: 400;
+        line-height: 2;
+    }
+    .company-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .company-content-wrapper .company-left-section ul li {
+        list-style: none;
+    }
+    .company-content-wrapper .company-left-section ul li a {
+        color: #F6F2FF;
+        font-size: 10px;
+        text-decoration: none;
+        font-family: 'poppins', sans-serif;
+        font-weight: 400;
+        line-height: 2;
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {
+    #nav-container {
+        display: block;
+    }
+    .full-screen-nav-container {
+        display: none;
+    }
+    .overlay {
+        display: none;
+    }
+    .homepage-content {
+        height: 100vh;
+    }
+    .deposit-description {
+        width: 600px;
+    }
+    .left-section {
+        width: 600px;
+    }
+    .bills-description {
+        width: 600px;
+    }
+    .loan-description {
+        width: 600px;
     }
 }
