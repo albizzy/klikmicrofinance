@@ -526,7 +526,7 @@ body {
 .transfer-button-container {
     background: transparent;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     padding: 1rem 1rem;
     align-items: center;
 }
@@ -1273,12 +1273,11 @@ body {
         background: #F6F2FF;
         border-radius: 5%;
         box-shadow: 0px 6px 20px #e9e8e8;
-        padding: 1.5rem 1.5rem;
+        padding: 1rem 6rem 1rem 6rem;
     }
     .deposit-description h1 {
         color: #040403;
         background: transparent;
-        width: 340px;
         font-size: 30px;
         font-family: 'poppins', sans-serif;
         font-weight: bold;
@@ -1307,11 +1306,10 @@ body {
         background: #F6F2FF;
         border-radius: 5%;
         box-shadow: 0px 6px 20px #e9e8e8;
-        padding: 1.5rem 1.5rem;
+        padding: 1rem 7.6rem 1rem 7.6rem;
     }
     .left-section h1 {
         background: transparent;
-        width: 340px;
         color: #040403;
         font-size: 30px;
         font-family: 'poppins', sans-serif;
@@ -1340,11 +1338,10 @@ body {
         background: #F6F2FF;
         border-radius: 5%;
         box-shadow: 0px 6px 20px #e9e8e8;
-        padding: 1.5rem 1.5rem;
+        padding: 1rem 6.3rem 1rem 6.3rem;
     }
     .bills-description h1 {
         background: transparent;
-        width: 340px;
         color: #040403;
         font-size: 30px;
         font-family: 'poppins', sans-serif;
@@ -1374,11 +1371,10 @@ body {
         background: #F6F2FF;
         border-radius: 5%;
         box-shadow: 0px 6px 20px #e9e8e8;
-        padding: 1.5rem 1.5rem;
+        padding: 1rem 6.3rem 1rem 6.3rem;
     }
     .loan-description h1 {
         background: transparent;
-        width: 340px;
         color: #040403;
         font-size: 30px;
         font-family: 'poppins', sans-serif;
@@ -1467,6 +1463,9 @@ body {
     }
     .homepage-content {
         height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
     .deposit-description {
         width: 600px;
