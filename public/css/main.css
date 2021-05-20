@@ -282,7 +282,7 @@ body {
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-    padding: 4rem 4rem;
+    padding: 1rem 1rem;
     display: flex;
     justify-content: space-between;
 }
@@ -367,7 +367,7 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
-    padding: 4rem 4rem;
+    padding: 1rem 1rem;
 }
 
 .deposit-main {
@@ -469,7 +469,7 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
-    padding: 4rem 4rem;
+    padding: 1rem 1rem;
 }
 
 .left-section {
@@ -571,7 +571,7 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
-    padding: 4rem 4rem;
+    padding: 1rem 1rem;
 }
 
 .bills-img {
@@ -669,7 +669,7 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
-    padding: 4.5rem;
+    padding: 1rem 1rem;
 }
 
 .loan-img {
@@ -1220,13 +1220,34 @@ body {
 /* Media queries */
 
 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+
+/*
+@media only screen and (min-width: 600px) {
+    .deposit-description {
+        width: 100%;
+    }
+    .left-section {
+        width: 100%;
+    }
+    .bills-description {
+        width: 100%;
+    }
+    .loan-description {
+        width: 100%;
+    }
+}
+
+*/
+
+
 /* Extra small devices (phones, 600px and down) */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 670px) {
     /* Nav queries */
     .nav-container .nav-wrapper {
-        width: 100vh;
-        padding: 0rem 0rem;
+        width: 100%;
     }
     .full-screen-nav-container {
         display: block;
@@ -1235,14 +1256,22 @@ body {
         display: block;
     }
     /* Homepage queries */
+    .homepage-content-wrapper {
+        background: linear-gradient(135deg, #1E6091, #168AAD);
+        width: 100;
+    }
     .homepage-content .homepage-content-wrapper {
-        width: 100vw;
-        padding: 2rem 2rem;
+        width: 100%;
         display: flex;
         flex-direction: column;
+        padding: 1rem 1rem;
+    }
+    .main-content {
+        width: 100%;
     }
     .main-content h1 {
         color: #F6F2FF;
+        width: 100%;
         font-size: 30px;
         font-weight: 800;
         font-family: 'poppin', sans-serif;
@@ -1260,20 +1289,19 @@ body {
     }
     /* Deposit queries */
     .deposit-container .deposit-content-wrapper {
-        width: 100vw;
-        padding: 2rem 2rem;
+        width: 100%;
+        padding: 1rem 1rem;
     }
     .deposit-main {
         display: none;
     }
-    .deposit-content-wrapper .deposit-description {
+    .deposit-description {
         background: transparent;
         height: auto;
         width: 100%;
         background: #F6F2FF;
         border-radius: 5%;
         box-shadow: 0px 6px 20px #e9e8e8;
-        padding: 1rem 6rem 1rem 6rem;
     }
     .deposit-description h1 {
         color: #040403;
@@ -1293,20 +1321,19 @@ body {
     }
     /* Transfer queries */
     .transfer-container .transfer-content-wrapper {
-        width: 100vw;
-        padding: 2rem 2rem;
+        width: 100%;
+        padding: 1rem 1rem;
     }
     .transfer-content-wrapper .right-section {
         display: none;
     }
-    .transfer-content-wrapper .left-section {
+    .left-section {
         background: transparent;
         width: 100%;
         height: auto;
         background: #F6F2FF;
         border-radius: 5%;
         box-shadow: 0px 6px 20px #e9e8e8;
-        padding: 1rem 7.6rem 1rem 7.6rem;
     }
     .left-section h1 {
         background: transparent;
@@ -1326,19 +1353,18 @@ body {
     }
     /* Bills queries */
     .bills-container .bills-content-wrapper {
-        width: 100vw;
-        padding: 2rem 2rem;
+        width: 100%;
+        padding: 1rem 1rem;
     }
     .bills-content-wrapper .bills-img {
         display: none;
     }
-    .bills-content-wrapper .bills-description {
+    .bills-description {
         width: 100%;
         height: auto;
         background: #F6F2FF;
         border-radius: 5%;
         box-shadow: 0px 6px 20px #e9e8e8;
-        padding: 1rem 6.3rem 1rem 6.3rem;
     }
     .bills-description h1 {
         background: transparent;
@@ -1358,20 +1384,19 @@ body {
     }
     /* Loans queries */
     .loans-container .loans-content-wrapper {
-        width: 100vw;
-        padding: 2rem 2rem;
+        width: 100%;
+        padding: 1rem 1rem;
     }
     .loans-content-wrapper .loan-img {
         display: none;
     }
-    .loans-content-wrapper .loan-description {
+    .loan-description {
         background: transparent;
         width: 100%;
         height: auto;
         background: #F6F2FF;
         border-radius: 5%;
         box-shadow: 0px 6px 20px #e9e8e8;
-        padding: 1rem 6.3rem 1rem 6.3rem;
     }
     .loan-description h1 {
         background: transparent;
