@@ -362,7 +362,7 @@ span {
     height: 40px;
     border: transparent;
     background: #2386AD;
-    border-radius: 5%;
+    border-radius: 5px;
 }
 
 .developer-contact-button-container button a {
@@ -444,7 +444,7 @@ span {
         align-items: center;
     }
     .developer-card-image-container {
-        width: 100%;
+        width: 39.5%;
         height: 100%;
         background: transparent;
         display: flex;
@@ -456,8 +456,8 @@ span {
     }
     .developer-card-description-wrapper {
         background: transparent;
-        width: 60%;
-        padding: 0rem 0rem;
+        width: 50%;
+        padding: .5rem .5rem;
     }
     .our-team-description-wrapper-developers-section h1 {
         margin-top: 1.5rem;

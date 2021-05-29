@@ -1304,7 +1304,7 @@ body {
         background: url("img/deposit.svg");
         background-size: auto 80px;
         background-repeat: no-repeat;
-        background-position: left bottom;
+        background-position: right top;
         border-radius: 5%;
         box-shadow: 0px 6px 20px #e9e8e8;
     }
@@ -1408,7 +1408,7 @@ body {
         background: url("img/loan.svg");
         background-size: auto 105px;
         background-repeat: no-repeat;
-        background-position: left bottom;
+        background-position: right top;
         border-radius: 5%;
         box-shadow: 0px 6px 20px #e9e8e8;
     }
@@ -1429,7 +1429,7 @@ body {
         line-height: 2;
     }
     .footer-container .footer-content-wrapper {
-        width: 100vw;
+        width: 100%;
     }
     .products-container {
         padding: 0;
