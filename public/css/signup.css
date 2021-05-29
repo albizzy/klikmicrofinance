@@ -6,7 +6,6 @@
 
 body {
     background: #F6F2FF;
-    overflow-x: hidden;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -41,7 +40,7 @@ a {
 }
 
 
-/*styles for nav bar*/
+/*styles for nav bar
 
 #nav-container {
     display: grid;
@@ -195,23 +194,25 @@ span {
     }
 }
 
+*/
+
 
 /* signup content*/
 
 .signup-container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
     height: 100%;
-    padding: 4rem 4rem;
+    padding: 1rem 1rem;
 }
 
 .signup-content-wrapper {
     display: flex;
     justify-content: space-between;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
     background: transparent;
-    padding: 1rem 1rem;
 }
 
 .signup-desc-container {
@@ -240,34 +241,28 @@ span {
 .signup-form-container {
     display: grid;
     grid-template-columns: 1fr;
-    width: 600px;
+    width: 100%;
     padding: .5rem .5rem;
-    height: auto;
+    height: 100%;
     background: transparent;
 }
 
 .signup-form-wrapper {
     width: 100%;
-    height: auto;
-    background: transparent;
-}
-
-.form-input-wrapper .left {
-    background: transparent;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    align-items: center;
+    height: 100%;
+    background: #F6F2FF;
+    padding: 1.5rem 1.5rem;
 }
 
 .form-input-wrapper {
+    width: 100%;
+    height: 100%;
+    background: transparent;
     border-radius: 10px;
     display: flex;
-    background: #F6F2FF;
+    padding: 1rem 1rem;
     box-shadow: 0px 6px 20px #e9e8e8;
-    padding: 4rem 4rem;
-    justify-content: space-between;
+    /*box-shadow: 0px 6px 20px #e9e8e8;*/
 }
 
 form h1 {
@@ -284,17 +279,19 @@ form label {
     font-family: 'poppins', sans-serif;
     font-size: 12px;
     font-weight: 500;
+    margin: .5rem;
 }
 
 form input {
+    margin: .5rem;
     padding: 0.5rem 0.5rem;
     font-family: 'poppins', sans-serif;
     font-size: 12px;
-    width: 100%;
+    width: 250px;
     height: 30px;
     border: transparent;
     background: transparent;
-    border-bottom: 2px solid #2386AD;
+    border-bottom: 1px solid #2386AD;
     outline: transparent;
 }
 
@@ -307,11 +304,11 @@ form input[type=date] {
     color: #8f8b8b;
     font-family: 'poppins', sans-serif;
     font-size: 10px;
+    width: 150px;
 }
 
 form input[type=submit] {
     margin-top: 1.5rem;
-    margin-left: 1.5rem;
     padding: .5rem .5rem;
     width: 200px;
     border: none;
@@ -321,7 +318,6 @@ form input[type=submit] {
     height: 40px;
     background: #2386AD;
     color: #F6F2FF;
-    margin-bottom: .5rem;
 }
 
 form input[type=submit]:hover {
@@ -362,12 +358,50 @@ form select {
 
 .step {
     display: block;
+    width: 100%;
 }
 
 .step-2 {
-    display: none;
+    display: block;
+    width: 100%;
 }
 
 .step-3 {
-    display: none;
+    display: block;
+    width: 100%;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+    .signup-container {
+        width: 100%;
+        height: 100%;
+        padding: 1rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .signup-desc-container {
+        display: none;
+    }
+    .signup-form-container {
+        width: 100%;
+    }
+    .form-input-wrapper {
+        width: 100%;
+    }
+    form input {
+        width: 250px;
+    }
+    .signup-content-wrapper {
+        background: transparent;
+        display: flex;
+        justify-content: center;
+    }
+    .signup-form-container {
+        padding: 0;
+    }
 }

@@ -185,7 +185,7 @@ body {
 .overlay {
     height: 100%;
     width: 0;
-    position: absolute;
+    position: fixed;
     z-index: 15;
     top: 0;
     left: 0;
@@ -1244,7 +1244,7 @@ body {
 
 /* Extra small devices (phones, 600px and down) */
 
-@media only screen and (max-width: 670px) {
+@media only screen and (max-width: 600px) {
     /* Nav queries */
     .nav-container .nav-wrapper {
         width: 100%;
@@ -1492,14 +1492,34 @@ body {
         background-position: center;
         background-repeat: no-repeat;
     }
+    .homepage-content-wrapper {
+        width: 100%;
+        padding: 4rem 4rem;
+    }
+    .deposit-content-wrapper {
+        width: 100%;
+        padding: 4rem 4rem;
+    }
     .deposit-description {
         width: 600px;
+    }
+    .transfer-content-wrapper {
+        width: 100%;
+        padding: 4rem 4rem;
     }
     .left-section {
         width: 600px;
     }
+    .bills-content-wrapper {
+        width: 100%;
+        padding: 4rem 4rem;
+    }
     .bills-description {
         width: 600px;
+    }
+    .loans-content-wrapper {
+        width: 100%;
+        padding: 4rem 4rem;
     }
     .loan-description {
         width: 600px;
