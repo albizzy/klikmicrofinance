@@ -29,12 +29,15 @@ function switchToFormThree() {
     if (!inputObjectMobile.checkValidity()) {
         document.getElementById("MsgMobile").innerHTML = "Please fill out your Mobile Number";
         document.getElementById("MsgMobile").style.color = "red";
+        document.getElementById("MsgMobile").style.fontSize = "10px";
     } else if (!inputObjectGender.checkValidity()) {
         document.getElementById("MsgGender").innerHTML = "Please choose your gender";
         document.getElementById("MsgGender").style.color = "red";
+        document.getElementById("MsgGender").style.fontSize = "10px";
     } else if (!inputObjectCountry.checkValidity()) {
         document.getElementById("MsgCountry").innerHTML = "Please choose your country";
         document.getElementById("MsgCountry").style.color = "red";
+        document.getElementById("MsgCountry").style.fontSize = "10px";
     } else {
         document.getElementById("formTwo").style.display = "none";
         document.getElementById("formThree").style.display = "block";
