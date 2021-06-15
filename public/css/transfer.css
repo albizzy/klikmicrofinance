@@ -190,8 +190,11 @@ body {
         font-family: 'poppins', sans-serif;
         font-weight: bold;
     }
+    .send-icon-wrapper i {
+        font-size: 2.7rem;
+    }
     .send-button-container button {
-        width: 150px;
-        height: 40px;
+        width: 165px;
+        height: 55px;
     }
 }
