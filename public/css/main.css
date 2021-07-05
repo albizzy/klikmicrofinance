@@ -436,16 +436,12 @@ body {
     border-radius: 5px;
     padding: .5rem .5rem;
     border: transparent;
-    background: #2386AD;
+    background: transparent;
     outline: transparent;
 }
 
-.deposit-button-container button:hover {
-    background: #093880;
-}
-
 .deposit-button-container button a {
-    color: #F6F2FF;
+    color: transparent;
     text-decoration: none;
     text-align: center;
     width: 100%;
@@ -538,16 +534,12 @@ body {
     border-radius: 5px;
     padding: .5rem .5rem;
     border: transparent;
-    background: #2386AD;
+    background: transparent;
     outline: transparent;
 }
 
-.transfer-button-container button:hover {
-    background: #093880;
-}
-
 .transfer-button-container button a {
-    color: #F6F2FF;
+    color: transparent;
     text-decoration: none;
     text-align: center;
     width: 100%;
@@ -636,16 +628,12 @@ body {
     border-radius: 5px;
     padding: .5rem .5rem;
     border: transparent;
-    background: #2386AD;
+    background: transparent;
     outline: transparent;
 }
 
-.bill-button-container button:hover {
-    background: #093880;
-}
-
 .bill-button-container button a {
-    color: #F6F2FF;
+    color: transparent;
     text-decoration: none;
     text-align: center;
     width: 100%;
@@ -735,16 +723,12 @@ body {
     border-radius: 5px;
     padding: .5rem .5rem;
     border: transparent;
-    background: #2386AD;
+    background: transparent;
     outline: transparent;
 }
 
-.loan-button-container button:hover {
-    background: #093880;
-}
-
 .loan-button-container button a {
-    color: #F6F2FF;
+    color: transparent;
     text-decoration: none;
     text-align: center;
     width: 100%;
@@ -1430,6 +1414,7 @@ body {
     }
     .footer-container .footer-content-wrapper {
         width: 100%;
+        display: none;
     }
     .products-container {
         padding: 0;

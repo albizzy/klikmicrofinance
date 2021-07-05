@@ -42,7 +42,7 @@ body {
     background: transparent;
     padding: 1rem 1rem;
     width: 100%;
-    height: 10%;
+    height: 40%;
 }
 
 .header-content-wrapper {
@@ -51,6 +51,8 @@ body {
     width: 100%;
     height: 100%;
     box-shadow: 0px 6px 20px #e9e8e8;
+    background: linear-gradient(135deg, #1E6091, #168AAD);
+    border-radius: 0 0 200px 200px;
 }
 
 .header-content-wrapper .heading-wrapper {
@@ -62,7 +64,7 @@ body {
 }
 
 .heading-wrapper h1 {
-    color: #040403;
+    color: #F6F2FF;
     font-size: 25px;
     font-family: 'poppins', sans-serif;
     font-weight: bold;
@@ -88,16 +90,19 @@ body {
     display: grid;
     grid-template-areas: 'header header header main main main' 'header header header main main main' 'article article article section section section' 'article article article section section section';
     grid-gap: 10px;
+    place-items: center;
+    justify-items: space-between;
     background: transparent;
     padding: 1rem;
     height: 82vh;
 }
 
 .grid-container>div {
-    background: rgba(255, 255, 255, .6);
+    width: 90%;
     height: 100%;
     background: #F6F2FF;
     box-shadow: 0px 6px 20px #e9e8e8;
+    border-radius: 15px;
 }
 
 .item1 .item1-content-wrapper {
@@ -145,6 +150,8 @@ body {
 
 .send-icon-wrapper i {
     font-size: 2rem;
+    font-weight: 200;
+    color: #040403;
 }
 
 .item1-content-wrapper .send-button-container {
@@ -154,29 +161,38 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem 1rem;
 }
 
 .send-button-container button {
     width: 200px;
-    height: 50px;
+    height: 100%;
     border-radius: 5px;
     padding: .5rem .5rem;
     border: transparent;
-    background: #2386AD;
+    background: transparent;
     outline: transparent;
 }
 
 .send-button-container button a {
-    color: #F6F2FF;
+    color: #040403;
     text-decoration: none;
     text-align: center;
     width: 100%;
     height: 100%;
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 10px;
+    font-weight: 550;
+    font-family: 'poppins';
 }
 
 @media only screen and (max-width: 600px) {
+    .grid-container>div {
+        background: rgba(255, 255, 255, .6);
+        height: 80%;
+        background: #F6F2FF;
+        box-shadow: 0px 6px 20px #e9e8e8;
+        border-radius: 15px;
+    }
     .header-content-wrapper .heading-wrapper {
         background: transparent;
         width: 100%;
@@ -185,16 +201,16 @@ body {
         align-items: center;
     }
     .heading-wrapper h1 {
-        color: #040403;
+        color: #F6F2FF;
         font-size: 18px;
         font-family: 'poppins', sans-serif;
         font-weight: bold;
     }
     .send-icon-wrapper i {
-        font-size: 2.7rem;
+        font-size: 16px;
     }
     .send-button-container button {
         width: 165px;
-        height: 55px;
+        height: 100%;
     }
 }
